@@ -3,7 +3,7 @@ from datetime import timedelta
 
 from pathlib import Path
 
-import django_heroku , dj_database_url, os
+import os
 
 
 
@@ -27,13 +27,13 @@ ALLOWED_HOSTS = ['localhost','backendauthen.herokuapp.com']
 
 
 
-##Cors headers 
-CORS_ALLOWED_ORIGINS = [
-    'https://localhost.com',
-    'https://backendauthen.herokuapp.com',
-    'https://grand-lamington-d9e9fc.netlify.app',
-]
-##End Cors headers
+# ##Cors headers 
+# CORS_ALLOWED_ORIGINS = [
+#     'https://localhost.com',
+#     'https://backendauthen.herokuapp.com',
+#     'https://grand-lamington-d9e9fc.netlify.app',
+# ]
+# ##End Cors headers
 
 ######################### Djoser configuration ###########################
 #######################################################################
@@ -206,7 +206,6 @@ MEDIA_URL  = '/media/'
 STATICFILE_DIRS = (os.path.join(BASE_DIR, 'template/static'), )
 STATIC_ROOT  = os.path.join(BASE_DIR, 'static')
 
-django_heroku.settings(locals())
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 

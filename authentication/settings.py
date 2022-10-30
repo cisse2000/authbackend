@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ['localhost','backendauthen.herokuapp.com']
 ##Cors headers 
 CORS_ALLOWED_ORIGINS = [
     'https://localhost.com',
-    'https://backendauthen.herokuapp.com'
+    'https://backendauthen.herokuapp.com',
     'https://grand-lamington-d9e9fc.netlify.app',
 ]
 ##End Cors headers

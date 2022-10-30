@@ -91,7 +91,7 @@ DJOSER = {
 }
 
 
-DOMAIN ="localhost:8080"
+DOMAIN ="grand-lamington-d9e9fc.netlify.app"
 SITE_NAME ="Mon site"
 
 
@@ -119,6 +119,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',

@@ -22,13 +22,14 @@ SECRET_KEY = 'django-insecure-03ndxicji*$r!ou=fnz*4#txv*m&sdvfcd0upz7*=r7zg60=@w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['backendauthen.herokuapp.com']
+ALLOWED_HOSTS = ['localhost','backendauthen.herokuapp.com']
 
 
 
 
 ##Cors headers 
 CORS_ALLOWED_ORIGINS = [
+    'https://localhost.com',
     'https://backendauthen.herokuapp.com'
     'https://grand-lamington-d9e9fc.netlify.app',
 ]

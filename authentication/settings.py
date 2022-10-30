@@ -3,6 +3,12 @@ from datetime import timedelta
 
 from pathlib import Path
 
+import django_heroku , dj_database_url, os
+
+
+
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -190,13 +196,18 @@ USE_TZ = True
 STATIC_URL = 'static/'
 MEDIA_URL  = '/media/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'template/static')
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'template/static')
+# ]
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-
+STATICFILE_DIRS = (os.path.join(BASE_DIR, 'template/static'), )
 STATIC_ROOT  = os.path.join(BASE_DIR, 'static')
-MEDIA_ROOT = BASE_DIR / 'media'
+
+django_heroku.settings(locals())
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 WEBSITE_URL = 'http://127.0.0.1:8000'
 

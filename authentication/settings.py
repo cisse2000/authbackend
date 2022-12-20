@@ -22,18 +22,20 @@ SECRET_KEY = 'django-insecure-03ndxicji*$r!ou=fnz*4#txv*m&sdvfcd0upz7*=r7zg60=@w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','backendauthen.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 
 
-# ##Cors headers 
-# CORS_ALLOWED_ORIGINS = [
-#     'https://localhost.com',
-#     'https://backendauthen.herokuapp.com',
-#     'https://grand-lamington-d9e9fc.netlify.app',
-# ]
-# ##End Cors headers
+##Cors headers 
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:8080',
+    
+    # 'https://localhost.com',
+    # 'https://backendauthen.herokuapp.com',
+    # 'https://grand-lamington-d9e9fc.netlify.app',
+]
+##End Cors headers
 
 ######################### Djoser configuration ###########################
 #######################################################################
@@ -91,7 +93,8 @@ DJOSER = {
 }
 
 
-DOMAIN ="grand-lamington-d9e9fc.netlify.app"
+# DOMAIN ="" 
+DOMAIN ="localhost:8080"
 SITE_NAME ="Mon site"
 
 
